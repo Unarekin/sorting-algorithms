@@ -1,9 +1,7 @@
 'use strict'
 var sort = require('./bubblesort');
 
-console.log("SORT!");
-
-
+//Some sample data to test out whether or not the sorting even works at all, and gauge its speed.
 var sampleData = [
   [3,1,4,1,5,9,2,6,5,4],
   [9,2,8,6,1,3],
@@ -20,6 +18,8 @@ for (let i=0;i<sampleData.length;i++) {
   let time = new Date() - start;
 
   console.log("Sorted: " + sorted.join(",") + " (" + time + "ms)");
+
+  // The sort function decorates its return with two properties to help with some performance comparison
   console.log("Comparisons: " + sorted.__comparisons);
   console.log("Swaps: " + sorted.__swaps);
 }
