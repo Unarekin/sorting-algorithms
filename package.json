@@ -1,0 +1,22 @@
+{
+  "name": "sortingalgorithms",
+  "version": "1.0.0",
+  "description": "Some personal implementations of different sorting algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha bubblesort/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unarekin/sorting-algorithms.git"
+  },
+  "keywords": [
+    "sorting"
+  ],
+  "author": "Samuel Phelps",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Unarekin/sorting-algorithms/issues"
+  },
+  "homepage": "https://github.com/Unarekin/sorting-algorithms#readme"
+}

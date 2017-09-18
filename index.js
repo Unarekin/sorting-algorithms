@@ -14,7 +14,7 @@ var sampleData = [
 for (let i=0;i<sampleData.length;i++) {
   console.log("Original: ", sampleData[i].join(","));
   let start = new Date();
-  let sorted = sort(sampleData[i]);
+  let sorted = sort(sampleData[i], null, true);
   let time = new Date() - start;
 
   console.log("Sorted: " + sorted.join(",") + " (" + time + "ms)");

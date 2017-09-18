@@ -8,8 +8,14 @@
 
 
 
- module.exports = function(list, compare) {
+ module.exports = function(list, compare, addDebugInfo) {
   var compFunc = (compare || defaultCompare);
+
+  if (!Array.isArray(list))
+    throw new Error("Attempting to sort non-array");
+
+  if (compare && typeof compare !== 'function')
+    throw new Error("Expecting a function for comparison, received " + typeof(compare));
 
   // Shallow copy
   var newList = list.slice();
@@ -30,9 +36,11 @@
     n = newN;
   } while (n > 0)
 
-  newList.__swaps = swaps;
-  newList.__comparisons = comparisons;
-
+  if (addDebugInfo) {
+    newList.__swaps = swaps;
+    newList.__comparisons = comparisons;
+  }
+  
   return newList;
  }
 
