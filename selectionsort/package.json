@@ -1,0 +1,11 @@
+{
+  "name": "selectionsort",
+  "version": "1.0.0",
+  "description": "An implementation of selection sorting algorithm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Phelps",
+  "license": "MIT"
+}
