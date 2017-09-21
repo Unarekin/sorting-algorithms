@@ -1,6 +1,8 @@
 'use strict'
 var bubblesort = require('./bubblesort');
 var selectionsort = require('./selectionsort');
+var insertionsort = require('./insertionsort');
+var heapsort = require('./heapsort');
 
 //Some sample data to test out whether or not the sorting even works at all, and gauge its speed.
 var sampleData = [
@@ -13,30 +15,24 @@ var sampleData = [
 ]
 
 
-console.log("Bubble sorting:");
-for (let i=0;i<sampleData.length;i++) {
-  console.log("   Original: ", sampleData[i].join(","));
-  let start = new Date();
-  let sorted = bubblesort(sampleData[i], null, true);
-  let time = new Date() - start;
+function performTest(label, func) {
+  console.log(label + ":");
+  for (let i=0;i<sampleData.length;i++) {
+    console.log("   Original: ", sampleData[i].join(","));
+    let start = new Date();
+    let sorted = func(sampleData[i], null, true);
+    let time = new Date() - start;
 
-  console.log("   Sorted: " + sorted.join(",") + " (" + time + "ms)");
+    console.log("   Sorted: " + sorted.join(",") + " (" + time + "ms)");
 
-  // The sort function decorates its return with two properties to help with some performance comparison
-  console.log("   Comparisons: " + sorted.__comparisons);
-  console.log("   Swaps: " + sorted.__swaps);
+    // The sort function decorates its return with two properties to help with some performance comparison
+    console.log("   Comparisons: " + sorted.__comparisons);
+    console.log("   Swaps: " + sorted.__swaps);
+  }
 }
 
-console.log("Selection sorting:");
-for (let i=0;i<sampleData.length;i++) {
-  console.log("   Original: ", sampleData[i].join(","));
-  let start = new Date();
-  let sorted = selectionsort(sampleData[i], null, true);
-  let time = new Date() - start;
 
-  console.log("   Sorted: " + sorted.join(",") + " (" + time + "ms)");
-
-  // The sort function decorates its return with two properties to help with some performance comparison
-  console.log("   Comparisons: " + sorted.__comparisons);
-  console.log("   Swaps: " + sorted.__swaps);
-}
+performTest("Bubble sort", bubblesort);
+performTest("Selection sort", selectionsort);
+performTest("Insertion sort", insertionsort);
+performTest("Heap sort", heapsort);
