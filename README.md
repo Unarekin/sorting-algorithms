@@ -19,6 +19,10 @@ https://en.wikipedia.org/wiki/Insertion_sort
 A pretty naïve implementation of using a binary heap to sort an array of elements.  This module only implements the initial creation of a heap, and does not include any mechanism to insert or remove elements once it is created, as we only care about using it to sort data.
 https://en.wikipedia.org/wiki/Heapsort
 
+### Merge sort
+Simplistic, recursive implementation of a merge sort.
+https://en.wikipedia.org/wiki/Merge_sort
+
 ## Testing
 Tests are written in mocha and may require this library be installed.
 
