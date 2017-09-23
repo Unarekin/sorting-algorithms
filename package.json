@@ -4,7 +4,7 @@
   "description": "Some personal implementations of different sorting algorithms",
   "main": "index.js",
   "scripts": {
-    "test": "mocha bubblesort/test selectionsort/test insertionsort/test heapsort/test mergesort/test"
+    "test": "mocha bubblesort/test selectionsort/test insertionsort/test heapsort/test mergesort/test quicksort/test"
   },
   "repository": {
     "type": "git",

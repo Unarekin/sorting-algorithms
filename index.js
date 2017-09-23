@@ -4,6 +4,7 @@ var selectionsort = require('./selectionsort');
 var insertionsort = require('./insertionsort');
 var heapsort = require('./heapsort');
 var mergesort = require('./mergesort');
+var quicksort = require('./quicksort');
 
 //Some sample data to test out whether or not the sorting even works at all, and gauge its speed.
 var sampleData = [
@@ -52,3 +53,4 @@ performTest("Selection sort", selectionsort);
 performTest("Insertion sort", insertionsort);
 performTest("Heap sort", heapsort);
 performTest("Merge sort", mergesort);
+performTest("Quick sort", quicksort);
