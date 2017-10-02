@@ -5,6 +5,7 @@ var insertionsort = require('./insertionsort');
 var heapsort = require('./heapsort');
 var mergesort = require('./mergesort');
 var quicksort = require('./quicksort');
+var shakersort = require('./shakersort');
 
 //Some sample data to test out whether or not the sorting even works at all, and gauge its speed.
 var sampleData = [
@@ -54,3 +55,4 @@ performTest("Insertion sort", insertionsort);
 performTest("Heap sort", heapsort);
 performTest("Merge sort", mergesort);
 performTest("Quick sort", quicksort);
+performTest("Shaker sort", shakersort);

@@ -23,6 +23,13 @@ https://en.wikipedia.org/wiki/Heapsort
 Simplistic, recursive implementation of a merge sort.
 https://en.wikipedia.org/wiki/Merge_sort
 
+### Shaker sort
+An adaptation of bubble sort, the shaker (or cocktail shaker, bidirectional bubble, or ripple sort) seeks to address the problem of what are referred to as "turtles" -- items in an array being sorted that will take a great many swaps to get to their proper place.  These will generally be items at the beginning of the list that belong at the end, or vice versa.
+
+A shaker sort should be quicker than bubble in cases where the list being sorted has turtles, but it does not tend to be more efficient than other algorithms entirely.
+
+https://en.wikipedia.org/wiki/Cocktail_shaker_sort
+
 ## Testing
 Tests are written in mocha and may require this library be installed.
 
