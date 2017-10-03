@@ -30,6 +30,11 @@ A shaker sort should be quicker than bubble in cases where the list being sorted
 
 https://en.wikipedia.org/wiki/Cocktail_shaker_sort
 
+## Bogosort
+Hopefully nobody makes a serious attempt to use this particular algorithm.  Bogosort randomly orders the elements in an array, then checks to see if its sorted.  It continues to do this until they happen to be in order.  It is very unlikely that it will actually finish.
+https://en.wikipedia.org/wiki/Bogosort
+
+
 ## Testing
 Tests are written in mocha and may require this library be installed.
 
