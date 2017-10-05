@@ -4,7 +4,7 @@
   "description": "Some personal implementations of different sorting algorithms",
   "main": "index.js",
   "scripts": {
-    "test": "mocha bubblesort/test selectionsort/test insertionsort/test heapsort/test mergesort/test quicksort/test shakersort/test bogosort/test"
+    "test": "mocha bubblesort/test selectionsort/test insertionsort/test heapsort/test mergesort/test quicksort/test shakersort/test bogosort/test bozosort/test"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,7 @@
     "url": "https://github.com/Unarekin/sorting-algorithms/issues"
   },
   "homepage": "https://github.com/Unarekin/sorting-algorithms#readme",
-  "dependencies": {}
+  "dependencies": {
+    "yesno": "0.0.1"
+  }
 }

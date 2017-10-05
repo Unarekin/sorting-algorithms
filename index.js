@@ -1,4 +1,6 @@
 'use strict'
+var yesno = require('yesno');
+
 var bubblesort = require('./bubblesort');
 var selectionsort = require('./selectionsort');
 var insertionsort = require('./insertionsort');
@@ -7,6 +9,7 @@ var mergesort = require('./mergesort');
 var quicksort = require('./quicksort');
 var shakersort = require('./shakersort');
 var bogosort = require("./bogosort");
+var bozosort = require('./bozosort');
 
 //Some sample data to test out whether or not the sorting even works at all, and gauge its speed.
 var sampleData = [
@@ -41,7 +44,7 @@ var data = [76,50,64,99,84,97,7,85,85,42,5,97,72,69,58,75,30,51,9,50,74,76,12,95
 
 function performTest(label, func) {
   var start = new Date();
-  var sorted = func(data, null, true);
+  var sorted = func(data);
 
   var time = (new Date() - start);
 
@@ -57,4 +60,16 @@ performTest("Heap sort", heapsort);
 performTest("Merge sort", mergesort);
 performTest("Quick sort", quicksort);
 performTest("Shaker sort", shakersort);
-performTest("Bogosort", bogosort);
+
+
+yesno.ask("Attempt a bogosort?", "no", function(response) {
+  if (response)
+    performTest("Bogosort", bogosort);
+
+
+  yesno.ask("Attempt a bozosort?", "no", function(response) {
+    if (response)
+      performTest("Bozosort", bozosort);
+  });
+});
+
