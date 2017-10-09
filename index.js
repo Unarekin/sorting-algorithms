@@ -8,6 +8,7 @@ var heapsort = require('./heapsort');
 var mergesort = require('./mergesort');
 var quicksort = require('./quicksort');
 var shakersort = require('./shakersort');
+var bucketsort = require('./bucketsort');
 var bogosort = require("./bogosort");
 var bozosort = require('./bozosort');
 
@@ -60,6 +61,7 @@ performTest("Heap sort", heapsort);
 performTest("Merge sort", mergesort);
 performTest("Quick sort", quicksort);
 performTest("Shaker sort", shakersort);
+performTest("Bucket sort", bucketsort);
 
 
 yesno.ask("Attempt a bogosort?", "no", function(response) {
@@ -70,6 +72,6 @@ yesno.ask("Attempt a bogosort?", "no", function(response) {
   yesno.ask("Attempt a bozosort?", "no", function(response) {
     if (response)
       performTest("Bozosort", bozosort);
+      process.exit();
   });
 });
-
